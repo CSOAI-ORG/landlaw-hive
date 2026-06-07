@@ -1,0 +1,71 @@
+{
+  "name": "landlaw",
+  "description": "UK property law tech — conveyancing, leases, planning.",
+  "url": "https://landlaw.ai",
+  "version": "0.1.0",
+  "provider": {
+    "organization": "CSOAI-ORG",
+    "url": "https://csoai.org"
+  },
+  "capabilities": {
+    "streaming": true,
+    "pushNotifications": false,
+    "stateTransitionHistory": true
+  },
+  "defaultInputModes": [
+    "text"
+  ],
+  "defaultOutputModes": [
+    "text",
+    "json"
+  ],
+  "skills": [
+    {
+      "id": "landlaw-ai-mcp",
+      "name": "landlaw-ai-mcp",
+      "description": "Tool: landlaw-ai-mcp (part of landlaw.ai hive L5)"
+    },
+    {
+      "id": "legal-document-ai-mcp",
+      "name": "legal-document-ai-mcp",
+      "description": "Tool: legal-document-ai-mcp (part of landlaw.ai hive L5)"
+    },
+    {
+      "id": "contract-review-ai-mcp",
+      "name": "contract-review-ai-mcp",
+      "description": "Tool: contract-review-ai-mcp (part of landlaw.ai hive L5)"
+    },
+    {
+      "id": "a2a-mesh",
+      "name": "Cross-hive A2A call",
+      "description": "Can call other MEOK hives via A2A (with user consent)"
+    },
+    {
+      "id": "memoria-commit",
+      "name": "Versioned memory commit",
+      "description": "Commits to memoria namespace 'landlaw'"
+    }
+  ],
+  "securitySchemes": {
+    "oauth2": {
+      "type": "oauth2",
+      "flows": {
+        "authorizationCode": {
+          "authorizationUrl": "https://landlaw.ai/oauth/authorize",
+          "tokenUrl": "https://landlaw.ai/oauth/token",
+          "scopes": {
+            "read": "Read hive state",
+            "write": "Invoke tools (x402-metered)",
+            "audit": "Read audit trail"
+          }
+        }
+      }
+    }
+  },
+  "x402Pricing": {
+    "enabled": true,
+    "currency": "USD",
+    "amount": "0.50",
+    "freeCallsPerIPPerDay": "3"
+  }
+}
