@@ -1,0 +1,22 @@
+{
+  "acpVersion": "0.1",
+  "agent": {
+    "name": "landlaw",
+    "description": "UK property law tech \u2014 conveyancing, leases, planning.",
+    "version": "0.1.0",
+    "provider": "CSOAI-ORG",
+    "interfaces": [
+      {
+        "type": "a2a",
+        "url": "https://landlaw.ai"
+      }
+    ],
+    "capabilities": [
+      "landlaw-ai-mcp",
+      "legal-document-ai-mcp",
+      "contract-review-ai-mcp",
+      "a2a-mesh",
+      "memoria-commit"
+    ]
+  }
+}
